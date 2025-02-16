@@ -1,0 +1,272 @@
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Roboto";
+  &.overflow {
+    overflow: hidden !important;
+  }
+}
+
+body {
+  @include flex;
+  @include dir-col;
+  @include justify-between;
+  min-height: 100vh;
+  background: #FAF2E7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+input,
+textarea {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  background: none;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.wrapper {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-title {
+  color: #fff;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.main-btn {
+  @include inline-flex;
+  @include align-center;
+  @include justify-center;
+  background: #471224;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 34px;
+  border-radius: 40px;
+  color: #ebe5e0;
+  img {
+    margin-left: 15px;
+  }
+  &:hover {
+    background: lighten(#471224, 7%);
+  }
+  &.scroll {
+    background: white;
+    color: #471224;
+  }
+}
+
+.white-btn {
+  @include inline-flex;
+  @include align-center;
+  @include justify-center;
+  border: 1px solid #471224;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 34px;
+  border-radius: 40px;
+  color: #471224;
+  &:hover {
+    background: #471224;
+    color: #ebe5e0;
+  }
+}
+
+
+
+
+
+
+
+
+
+.main-slider-info {
+  margin: 15px 0;
+  .info {
+    padding: 40px 0 20px;
+    background: url(../img/main-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .main-title {
+      margin-bottom: 40px;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+    }
+
+    .subtitle {
+      margin-bottom: 40px;
+      color: #fff;
+      font-size: 16px;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+    }
+    .buttons {
+      @include flex;
+      @include flex-wrap;
+      a {
+        @include flex;
+        @include align-center;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 40px;
+        background: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        color: #471224;
+        padding: 5px 10px 5px 20px;
+        @media (max-width: 767px) {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        .icon {
+          width: 34px;
+          height: 34px;
+          @include flex;
+          background: #471224;
+          border-radius: 50%;
+          margin-left: 15px;
+          img {
+            margin: auto;
+          }
+        }
+        &.border-style {
+          border: 1px solid #fff;
+          background: #471224;
+          color: white;
+          .icon {
+            background: white;
+          }
+        }
+      }
+    }
+  }
+  > .wrapper {
+    .slider-for,
+    .slider-for3 {
+      .item {
+        @include flex;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .slider-nav,
+    .slider-nav3 {
+      .item {
+        img {
+          width: 100%;
+        }
+        &.slick-current {
+          opacity: 0.5;
+        }
+      }
+    }
+    .slider-wrap,
+    .slider-wrap2 {
+      position: relative;
+      z-index: 0;
+      margin-top: 20px;
+      .slider-navigation {
+        button {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          background: #fff;
+          @media (max-width: 767px) {
+            width: 36px;
+            height: 36px;
+          }
+          img {
+            @media (max-width: 767px) {
+              width: 16px;
+            }
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+          &:before {
+            content: none;
+          }
+          &.slick-next {
+            right: 20px;
+            @media (max-width: 767px) {
+              right: -15px;
+            }
+          }
+          &.slick-prev {
+            left: 20px;
+            @media (max-width: 767px) {
+              left: -15px;
+            }
+            img {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
