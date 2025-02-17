@@ -1125,9 +1125,9 @@ background: #FAF2E7;
         font-size: 20px;
         max-width: 280px;
         width: 100%;
-        text-align: left;
-        margin: 0 auto;
-        padding-left: 10px;
+        text-align: center;
+        margin: 15px auto 0;
+        padding-left: 0;
       }
       b{
         font-weight: 500;
@@ -1145,11 +1145,12 @@ background: #FAF2E7;
       margin-top: 10px;
       max-width: 280px;
       width: 100%;
-      text-align: left;
-      padding-left: 10px;
+      text-align: center;
+      padding-left: 0px;
       display: none;
       @media (max-width: 767px) {
         @include flex;
+        @include justify-center;
       }
       img{
         margin-right: 10px;
